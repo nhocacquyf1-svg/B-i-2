@@ -63,3 +63,55 @@ sinh_vien = ("SV001", "Nguyễn Văn An", 8.5)
 ma_sv,ho_ten,diem = sinh_vien
 print (f"Mã sinh viên: {ma_sv}, Họ tên: {ho_ten}, Điểm :{diem} ")
 
+#6 
+diem = [8.0, 4.5, 7.0, 3.5, 9.0, 5.5, 6.0]
+dat =[]
+chua_dat = []
+for i in diem:
+    if i >= 5.0:
+        dat.append(i)
+    else:
+        chua_dat.append(i)
+print ("Danh sách điểm đạt: ", dat)
+print ("Danh sách điểm chưa đạt: ", chua_dat)
+print ("Điểm trung bình của nhóm đạt là: ", sum(dat)/len(dat))
+
+ #7
+lop_a = ["SV01", "SV02", "SV03", "SV02"]
+lop_b = ["SV03", "SV04", "SV01"]
+ca_hai = set (lop_a) & set(lop_b)
+chi_lop_a = set(lop_a).difference(set(lop_b))
+print ("Các sinh viên có trong cả hai lớp là: ", ca_hai)
+print ("Các sinh viên chỉ có trong lớp A là: ", chi_lop_a)
+print ("Tổng số sinh viên có trong 2 lớp là: ",len(set(lop_a).union(set(lop_b))))
+
+#8
+tu = ["python", "ai", "python", "data", "ai", "python"]
+dem = {}
+for t in tu:
+    if t in dem:
+
+        dem[t] += 1
+    else:
+        dem[t] = 1
+print ("Số lần xuất hiện của từng từ: ", dem)
+
+#9
+lop = [
+    {"ten": "An", "diem": 8.5},
+    {"ten": "Bình", "diem": 7.0},
+    {"ten": "Chi", "diem": 9.0},
+    {"ten": "Dũng", "diem": 4.5},
+]
+
+for v in lop:
+    if v["diem"] >= 8.5:
+        v["xep_loai"] = "Giỏi"
+    elif v["diem"] >= 7.0:
+        v["xep_loai"] = "Khá"
+    elif v["diem"] >= 5.0:
+        v["xep_loai"] = "Trung bình"
+    else:
+        v["xep_loai"] = "Yếu"
+for v in lop:
+    print (v)
