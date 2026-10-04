@@ -31,7 +31,7 @@ print("Các số lớn hơn hoặc bằng 20 là: ", so1)
 #Bài 3: List, turple, set, dictionary
 #1
 diem = [7.5, 8.0, 6.5, 9.0, 5.5]
-print ("Điểm đầu tiên là: ")
+print ("Điểm đầu tiên là: ", diem[0])
 print ("Điểm cuối cùng là: ", diem[-1])
 print ("Điểm trung bình là: ", sum(diem)/len(diem))
 print ("Điểm cao nhất là: ", max(diem))
@@ -53,7 +53,13 @@ ma_ko_trung =set(ma)
 print ("Số lượng mã không trùng là ", len(ma_ko_trung))
 
 #4
-sv = {"ten": "Nguyễn Hoàng Thiên", "lop": "26DKHA1", "diem" :"7.5"}
+sv = {"ten": "Nguyễn Hoàng Thiên", "lop": "26DKHA1", "diem" :7.5}
 sv ["xep_loai"]="Khá"
 for key, value in sv.items():
     print (key, ":", value)
+
+#5
+sinh_vien = ("SV001", "Nguyễn Văn An", 8.5)
+ma_sv,ho_ten,diem = sinh_vien
+print (f"Mã sinh viên: {ma_sv}, Họ tên: {ho_ten}, Điểm :{diem} ")
+
